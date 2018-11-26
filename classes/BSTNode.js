@@ -1,4 +1,4 @@
-class Node {
+class BSTNode {
   
   constructor (value, left = null, right = null) {
     this.value = value;
@@ -7,4 +7,4 @@ class Node {
   }
 }
 
-module.exports = Node;
+module.exports = BSTNode;

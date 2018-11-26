@@ -1,4 +1,4 @@
-const Node = require('./Node');
+const BSTNode = require('./BSTNode');
 
 class BinarySearchTree {
 
@@ -10,21 +10,21 @@ class BinarySearchTree {
     const node = this.root;
 
     if (node === null) {
-      this.root = new Node(value);
+      this.root = new BSTNode(value);
       return;
     } else {
       // Recursively traverse tree.
       const searchTree = (node) => {
         if (value < node.value) {
           if (node.left === null) {
-            node.left = new Node(value);
+            node.left = new BSTNode(value);
             return;
           } else {
             return searchTree(node.left);
           }
         } else if (value > node.value) {
           if (node.right === null) {
-            node.right = new Node(value);
+            node.right = new BSTNode(value);
             return;
           } else {
             return searchTree(node.right);
